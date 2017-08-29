@@ -14,6 +14,8 @@ import RouterLink from '../src/components/atoms/routerlink'
 import ButtonAction from '../src/components/atoms/ButtonAction'
 import TitleDescription from '../src/components/molecules/TitleDescription'
 
+import Title from '../src/components/atoms/Title'
+
 const stories = storiesOf('Button', module);
 
 stories.add('Hello World', withInfo('Hahahaha')(() => {
@@ -34,9 +36,25 @@ storiesOf('Button Action', module)
 .add('Router Link sample', () => (
   <ButtonAction>Home</ButtonAction>
 ));
-storiesOf('Title Description', module)
-.add('Without Theme', () => (
-  <TitleDescription Title2={'Durand'} Description2={'Neto'} />
+
+//storiesOf('Title Description', module)
+//.add('Without Theme', () => (
+//  <TitleDescription Title2={'Durand'} Description2={'Neto'} />
+//));
+
+storiesOf('Title', module)
+.add('Normal Case', () => (
+  <Title text={'Hackathon'} />
+));
+
+storiesOf('Title', module)
+.add('Upper Case', () => (
+  <Title text={'Hackathon'} isUpperCase />
+));
+
+storiesOf('Title', module)
+.add('Lower Case', () => (
+  <Title text={'Hackathon'} isLowerCase />
 ));
 
 /**
