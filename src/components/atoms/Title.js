@@ -16,17 +16,20 @@ const Title = ({text, size, isUpperCase, isLowerCase}) => {
         text = text.toLowerCase();
     }
 
-    /*
     switch(size) {
-        case "x1":
-        break;
         case "x2":
-        break;
+            var styles = {fontSize: 28};
+            break;
         case "x3":
-    }
-    */
+            var styles = {fontSize: 38};
+            break;
+        case "x1":
+        default:
+            var styles = {fontSize: 18};
 
-    return (<h2>{text}</h2>);
+    }
+
+    return (<h2 style={styles}>{text}</h2>);
 }
 
 export default Title

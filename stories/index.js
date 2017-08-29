@@ -57,6 +57,21 @@ storiesOf('Title', module)
   <Title text={'Hackathon'} isLowerCase />
 ));
 
+storiesOf('Title', module)
+.add('Font scale x1', () => (
+  <Title text={'Hackathon'} />
+));
+
+storiesOf('Title', module)
+.add('Font scale x2', () => (
+  <Title text={'Hackathon'} size={'x2'}/>
+));
+
+storiesOf('Title', module)
+.add('Font scale x3', () => (
+  <Title text={'Hackathon'} size={'x3'} />
+));
+
 /**
 storiesOf('Button', module)
   .add('with text', () => (
