@@ -4,13 +4,31 @@ import Title from '.'
 
 storiesOf('Title', module)
 .add('Normal Case', () => (
-  <Title> Hackathon Normal</Title>
+  <div>
+        <Title> Hackathon is Normal size 1</Title>
+        <br />
+        <Title size={2}> Hackathon is Normal size 2</Title>
+        <br />
+        <Title size={3}> Hackathon is Normal size 3</Title>
+    </div>
 )) 
 .add('Upper Case', () => (
-  <Title isUpperCase > Hackathon is UpperCase</Title>
+    <div>
+        <Title isUpperCase  > Hackathon is UpperCase size 1</Title>
+        <br />
+        <Title isUpperCase  size={2}> Hackathon is UpperCase size 2</Title>
+        <br />
+        <Title isUpperCase  size={3}> Hackathon is UpperCase size 3</Title>
+    </div>
 ))
 .add('Lower Case', () => (
-  <Title isLowerCase  size={2}> Hackathon is LowerCase </Title>
+    <div>
+        <Title isLowerCase  > Hackathon is LowerCase size 1</Title>
+        <br />
+        <Title isLowerCase  size={2}> Hackathon is LowerCase size 2</Title>
+        <br />
+        <Title isLowerCase  size={3}> Hackathon is LowerCase size 3</Title>
+    </div>
 ))
 .add('Font scale Size 1', () => (
   <Title> Hackathon Size 1 </Title>
