@@ -1,5 +1,5 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
+import { storiesOf, configure, addDecorator } from '@storybook/react'
 import { action } from '@storybook/addon-actions';
 import { linkTo } from '@storybook/addon-links';
 import { withInfo } from '@storybook/addon-info';
@@ -9,95 +9,69 @@ import { specs, describe, it } from 'storybook-addon-specifications'
 import {mount} from "enzyme";
 import expect from "expect";
 
+const store = storiesOf({}, module)
+const req = require.context('./../src/components', true, /.stories.js$/)
 
-import RouterLink from '../src/components/atoms/routerlink'
-import ButtonAction from '../src/components/atoms/ButtonAction'
-import TitleDescription from '../src/components/molecules/TitleDescription'
+function loadStories() {
+  req.keys().forEach(filename => req(filename))
+}
 
-import Title from '../src/components/atoms/Title'
+// addDecorator(story => (
+//   <Provider store={store}>
+//     <BrowserRouter>
+//       <ThemeProvider theme={theme}>{story()}</ThemeProvider>
+//     </BrowserRouter>
+//   </Provider>
+// ))
 
-const stories = storiesOf('Button', module);
+configure(loadStories, module)
 
-stories.add('Hello World', withInfo('Hahahaha')(() => {
-    const story =
-        <button onClick={action('Hello World')}>
-          Hello World
-        </button>;
-    specs(() => describe('Hello World', function () {
-        it('Should have the Hello World label', function () {
-            let output = mount(story);
-            expect(output.text()).toContain('Hello World');
-        });
-    }));
-    return story;
-}));
 
-storiesOf('Button Action', module)
-.add('Router Link sample', () => (
-  <ButtonAction>Home</ButtonAction>
-));
 
-//storiesOf('Title Description', module)
-//.add('Without Theme', () => (
-//  <TitleDescription Title2={'Durand'} Description2={'Neto'} />
-//));
 
-storiesOf('Title', module)
-.add('Normal Case', () => (
-  <Title text={'Hackathon'} />
-));
 
-storiesOf('Title', module)
-.add('Upper Case', () => (
-  <Title text={'Hackathon'} isUpperCase />
-));
+// import RouterLink from '../src/components/atoms/routerlink'
+// import ButtonAction from '../src/components/atoms/ButtonAction'
+// import TitleDescription from '../src/components/molecules/TitleDescription'
 
-storiesOf('Title', module)
-.add('Lower Case', () => (
-  <Title text={'Hackathon'} isLowerCase />
-));
+// import Title from '../src/components/atoms/Title'
 
-storiesOf('Title', module)
-.add('Font scale x1', () => (
-  <Title text={'Hackathon'} />
-));
+// const stories = storiesOf('Button', module);
 
-storiesOf('Title', module)
-.add('Font scale x2', () => (
-  <Title text={'Hackathon'} size={'x2'}/>
-));
+// stories.add('Hello World', withInfo('Hahahaha')(() => {
+//     const story =
+//         <button onClick={action('Hello World')}>
+//           Hello World
+//         </button>;
+//     specs(() => describe('Hello World', function () {
+//         it('Should have the Hello World label', function () {
+//             let output = mount(story);
+//             expect(output.text()).toContain('Hello World');
+//         });
+//     }));
+//     return story;
+// })); 
+// //storiesOf('Title Description', module)
+// //.add('Without Theme', () => (
+// //  <TitleDescription Title2={'Durand'} Description2={'Neto'} />
+// //));
 
-storiesOf('Title', module)
-.add('Font scale x3', () => (
-  <Title text={'Hackathon'} size={'x3'} />
-));
-
-/**
-storiesOf('Button', module)
-  .add('with text', () => (
-    <button onClick={action('clicked')}>Hello Button</button>
-  ))
-  .add('with Durand', () => (
-    <button onClick={action('clicked')}>Durand</button>
-  ))
-  .add('with some emoji', () => (
-    <button onClick={action('clicked')}>😀 😎 👍 💯</button>
-  ));
-
-storiesOf('Pages', module)
-  .add('Page Home', () => (
-    <PageHome />
-  ))
-  .add('Page Contact', () => (
-    <PageContact />
-  ))
-  .add('Page Tech secondary', () => (
-    <Provider store={store}><PageTech secondary>Durand</PageTech></Provider>
-  ));
-
-*/
-
-storiesOf('RouterLink', module)
-.add('Router Link sample', () => (
-  <RouterLink to="/">Home</RouterLink>
-));
+// storiesOf('Title', module)
+// .add('Normal Case', () => (
+//   <Title text={'Hackathon'} />
+// )) 
+// .add('Upper Case', () => (
+//   <Title text={'Hackathon'} isUpperCase />
+// ))
+// .add('Lower Case', () => (
+//   <Title text={'Hackathon'} isLowerCase />
+// ))
+// .add('Font scale x1', () => (
+//   <Title text={'Hackathon'} />
+// ))
+// .add('Font scale x2', () => (
+//   <Title text={'Hackathon'} size={'x2'}/>
+// ))
+// .add('Font scale x3', () => (
+//   <Title text={'Hackathon'} size={'x3'} />
+// )); 
