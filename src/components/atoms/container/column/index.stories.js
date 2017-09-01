@@ -2,7 +2,7 @@ import React from 'react'
 import { storiesOf } from '@storybook/react'
 import Container from '.'
 
-storiesOf('Atoms/Container', module)
+storiesOf('Atoms/Container/column', module)
 .add('Normal Case', () => (
   <Container>
        <h2>Normal Text</h2>

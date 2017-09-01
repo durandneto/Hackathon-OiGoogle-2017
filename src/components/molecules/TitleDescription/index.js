@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 import Title from  './../../atoms/title'
 import Description from  './../../atoms/description'
-import Container from  './../../atoms/container'
+import Container from  './../../atoms/container/column'
 
 const TitleDescription = (props) => (
  <Container alignCenter={props.alignCenter}  alignRight={props.alignRight} >

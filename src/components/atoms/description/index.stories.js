@@ -2,7 +2,7 @@ import React from 'react'
 import { storiesOf } from '@storybook/react'
 import Description from '.'
 
-storiesOf('Atoms/Desciption', module)
+storiesOf('Atoms/Description', module)
 .add('Normal Case', () => (
   <div>
         <Description> Hackathon is Normal size 1</Description>
