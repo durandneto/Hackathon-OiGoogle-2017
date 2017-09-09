@@ -4,12 +4,12 @@
   "description": "An example static site using static-site-generator-webpack-plugin",
   "main": "./src/index.js",
   "scripts": {
-    "dev": "webpack --progress -p",
+    "dev": "webpack",
     "build": "webpack --config webpack.prod.config.js --progress -p",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
-  "author": "VML DEV`Z GOLD TEAM",
+  "author": "Durand Neto",
   "license": "MIT",
   "dependencies": {
     "autoprefixer": "^7.1.2",

@@ -1,41 +1,33 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import Title from '.'
+import  * as Title from '.'
 
-storiesOf('Atoms/Title/H2', module)
+storiesOf('Atoms/Title', module)
 .add('Normal Case', () => (
   <div>
-        <Title> Hackathon is Normal size 1</Title>
-        <br />
-        <Title size={2}> Hackathon is Normal size 2</Title>
-        <br />
-        <Title size={3}> Hackathon is Normal size 3</Title>
+        <Title.H1> Hackathon is Normal  h1</Title.H1> 
+        <Title.H2> Hackathon is Normal  h2</Title.H2> 
+        <Title.H3> Hackathon is Normal  h3</Title.H3> 
+        <Title.H4> Hackathon is Normal  h4</Title.H4> 
+        <Title.H5> Hackathon is Normal  h5</Title.H5> 
+        <Title.H6> Hackathon is Normal  h6</Title.H6> 
     </div>
-)) 
-.add('Upper Case', () => (
-    <div>
-        <Title isUpperCase  > Hackathon is UpperCase size 1</Title>
-        <br />
-        <Title isUpperCase  size={2}> Hackathon is UpperCase size 2</Title>
-        <br />
-        <Title isUpperCase  size={3}> Hackathon is UpperCase size 3</Title>
+)) .add('isUpperCase Case', () => (
+  <div>
+        <Title.H1 isUpperCase> Hackathon is Normal  h1</Title.H1> 
+        <Title.H2 isUpperCase> Hackathon is Normal  h2</Title.H2> 
+        <Title.H3 isUpperCase> Hackathon is Normal  h3</Title.H3> 
+        <Title.H4 isUpperCase> Hackathon is Normal  h4</Title.H4> 
+        <Title.H5 isUpperCase> Hackathon is Normal  h5</Title.H5> 
+        <Title.H6 isUpperCase> Hackathon is Normal  h6</Title.H6> 
     </div>
-))
-.add('Lower Case', () => (
-    <div>
-        <Title isLowerCase  > Hackathon is LowerCase size 1</Title>
-        <br />
-        <Title isLowerCase  size={2}> Hackathon is LowerCase size 2</Title>
-        <br />
-        <Title isLowerCase  size={3}> Hackathon is LowerCase size 3</Title>
+))  .add('isLowerCase Case', () => (
+  <div>
+        <Title.H1 isLowerCase> Hackathon is Normal  h1</Title.H1> 
+        <Title.H2 isLowerCase> Hackathon is Normal  h2</Title.H2> 
+        <Title.H3 isLowerCase> Hackathon is Normal  h3</Title.H3> 
+        <Title.H4 isLowerCase> Hackathon is Normal  h4</Title.H4> 
+        <Title.H5 isLowerCase> Hackathon is Normal  h5</Title.H5> 
+        <Title.H6 isLowerCase> Hackathon is Normal  h6</Title.H6> 
     </div>
-))
-.add('Font scale Size 1', () => (
-  <Title> Hackathon Size 1 </Title>
-))
-.add('Font scale Size 2', () => (
-  <Title size={2} > Hackathon Size 2</Title>
-))
-.add('Font scale Size 3', () => (
-  <Title size={3}  > Hackathon Size 3</Title>
-)); 
+)) ;

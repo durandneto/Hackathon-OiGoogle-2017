@@ -8,19 +8,22 @@ storiesOf('Atoms/Container/row', module)
        <h2>Normal Text</h2>
         <p><span>asdfasdfasdf</span></p>
        <p>asdasd</p>
-    </Container>
-)) 
-.add('Centered Case', () => (
-     <Container alignCenter >
-       <h2>Centered Text</h2>
-       <p><span>asdfasdfasdf</span></p>
        <p>asdasd</p>
     </Container>
 )) 
-.add('Align Right Case', () => (
-     <Container alignRight >
+.add('Spaced Case', () => (
+     <Container  spaced>
        <h2>Centered Text</h2>
        <p><span>asdfasdfasdf</span></p>
        <p>asdasd</p>
+       <p>asdasd</p>
     </Container>
-));
+))
+.add('Space Around Case', () => (
+     <Container  spaceAround>
+       <h2>Centered Text</h2>
+       <p><span>asdfasdfasdf</span></p>
+       <p>asdasd</p>
+       <p>asdasd</p>
+    </Container>
+)) ;

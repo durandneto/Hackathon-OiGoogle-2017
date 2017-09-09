@@ -1,40 +1,54 @@
 import React from 'react'
-import styled from 'styled-components'
-import oiImg from '../../assets/images/oi-logo-purple-degrade-1.svg'
+import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
+import * as Actions from './../../actions'
+
+import Task  from './../../components/organisms/Task'
+
+class Home extends React.Component {
+
+	constructor(props){
+        super(props)
+        this.handleChange = this.handleChange.bind(this)
+        this.onSave = this.onSave.bind(this)
+        this.onDelete = this.onDelete.bind(this)
+    }
+
+	componentWillMount () {
+		this.props.loadTasks()
+	}
+	handleChange(event){
+        this.setState({[event.target.name]: event.target.value})
+    }
+	onSave(){
+        this.props.createTask(this.state)
+    }
+	onDelete(task){
+        this.props.deleteTask(task)
+    }
+
+	render() {
+		return (
+		  <Task 
+		  	tasks={ this.props.Task.get('data')}  
+		  	handleChange={ this.handleChange } 
+		  	onSave = { this.onSave } 
+		  	onDelete = { this.onDelete } 
+		  	/>
+		)
+	}
+}
 
 
-const LogoCont = styled.div`
-display: -ms-flexbox;
-display: -webkit-flex;
-display: flex;
--webkit-flex-direction: row;
--ms-flex-direction: row;
-flex-direction: row;
--webkit-flex-wrap: nowrap;
--ms-flex-wrap: nowrap;
-flex-wrap: nowrap;
--webkit-justify-content: center;
--ms-flex-pack: center;
-justify-content: center;
--webkit-align-content: stretch;
--ms-flex-line-pack: stretch;
-align-content: stretch;
--webkit-align-items: flex-start;
--ms-flex-align: start;
-align-items: flex-start;
-`
-
-const Title = styled.h1`
-font-family: SimplonRegular;
-`
-
-export default class Home extends React.Component {
-  render() {
-    return (
-      <LogoCont>
-        <Title>Home</Title>
-        <img src={oiImg}/>
-      </LogoCont>
-    )
+function mapStateToProps(state) {
+  return {
+  	Task: state.Task
   }
 }
+
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators(Actions, dispatch)
+}
+
+export { Home }
+export default connect(mapStateToProps, mapDispatchToProps)(Home)

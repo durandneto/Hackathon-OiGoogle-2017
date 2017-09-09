@@ -55,12 +55,5 @@ module.exports = {
     plugins: [
         new ExtractTextPlugin("styles.css"),
         new StaticSiteGeneratorPlugin({entry: 'main', crawl: true}),
-        new BrowserSyncPlugin({
-            host: 'localhost',
-            port: 3000,
-            server: {
-                baseDir: ['dist']
-            }
-        })
     ]
 };

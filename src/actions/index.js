@@ -1,29 +1,63 @@
 import { CALL_API, CHAIN_API } from './../middleware/api'
 import { browserHistory } from 'react-router'
 
-/* Açao de exemplo - Colocar aqui suas acoes */
-export const AUTHENTICATED = Symbol('AUTHENTICATED') 
-export const SET_USER_ADMIN = Symbol('SET_USER_ADMIN') 
-export const USER_AUTHENTICATED_ERROR = Symbol('USER_AUTHENTICATED_ERROR') 
-export const LOGOUT = Symbol('LOGOUT') 
+export const LOADDED_TASKS = Symbol('LOADDED_TASKS') 
+export const LOADDED_TASKS_ERROR = Symbol('LOADDED_TASKS_ERROR') 
 
-export function set_user_admin(user){
- return  {
-    type: SET_USER_ADMIN
-    , user
-  }
-}
-export function logout(user){
- return  {
-    type: LOGOUT
-  }
-}
-export function authenticate(){
+export const CREATED_TASK = Symbol('CREATED_TASK') 
+export const CREATED_TASK_ERROR = Symbol('CREATED_TASK_ERROR') 
+
+
+export const DELETED_TASK = Symbol('DELETED_TASK') 
+export const DELETED_TASK_ERROR = Symbol('DELETED_TASK_ERROR') 
+
+export function loadTasks(){
   return (dispatch, getState) => {
-  	let user = {
-  		email: getState().UserAdmin.get('email')
-  		, password: getState().UserAdmin.get('password')
-  	}
+    dispatch({
+      [CHAIN_API]: [
+          ()=> {
+            return {
+              [CALL_API]: {
+                method: 'get',
+                type: 'external',
+                path: '/tasks',
+                successType: LOADDED_TASKS,
+                errorType: LOADDED_TASKS_ERROR
+              }
+            }
+          }, (response) => {
+            console.log(response)
+          }
+        ]
+    })
+  }
+}
+
+export function deleteTask(task){
+  return (dispatch, getState) => {
+    dispatch({
+      [CHAIN_API]: [
+          ()=> {
+            return {
+              [CALL_API]: {
+                method: 'delete',
+                type: 'external',
+                path: '/task/delete/' + task.get('id'),
+                successType: DELETED_TASK,
+                errorType: DELETED_TASK_ERROR
+              }
+            }
+          }, (response) => {
+            console.log(response)
+            dispatch(loadTasks())
+          }
+        ]
+    })
+  }
+}
+
+export function createTask(task){
+  return (dispatch, getState) => {
     dispatch({
       [CHAIN_API]: [
           ()=> {
@@ -31,14 +65,13 @@ export function authenticate(){
               [CALL_API]: {
                 method: 'post',
                 type: 'external',
-                body: user,
-                path: '/user/authenticate',
-                successType: AUTHENTICATED,
-                errorType: USER_AUTHENTICATED_ERROR
+                path: '/task/create/' + task.title + '/' + task.description,
+                successType: CREATED_TASK,
+                errorType: CREATED_TASK_ERROR
               }
             }
           }, (response) => {
-            console.log(response)
+            dispatch(loadTasks())
           }
         ]
     })
