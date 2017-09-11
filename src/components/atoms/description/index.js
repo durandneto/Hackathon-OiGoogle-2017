@@ -42,5 +42,6 @@ export default styled.p`
 	${ props => props.isUpperCase && 'text-transform: uppercase' };
 	${ props => props.isLowerCase && 'text-transform: lowercase' };
 	font-size: ${ props => props.size ? `${calcSize(props.size)}` : '100%' };
+	${ props => props.margin && 'margin: 0.5em' };
 `
 
