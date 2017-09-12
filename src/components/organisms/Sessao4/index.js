@@ -14,7 +14,7 @@ import oiImg3 from './../../../assets/images/icon-fixo-section.png'
 
 const Sessao2 = (props) => (
 	<ContainerColumn margin>
-		<ContainerRow  {...props} spacedAround>
+		<ContainerRow  {...props} spacedAround media>
 			<ContainerColumn margin>
 				<Img src = { oiImg } /> 
 			 </ContainerColumn>

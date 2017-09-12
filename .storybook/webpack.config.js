@@ -14,7 +14,7 @@ module.exports = {
     module: {
         rules: [
            {
-            test: /\.(png|woff|woff2|eot|ttf|svg)$/,
+            test: /\.(png|woff|woff2|eot|ttf|svg|jpg)$/,
             loaders: ['file-loader'],
             include: path.resolve(__dirname, '../')
             },

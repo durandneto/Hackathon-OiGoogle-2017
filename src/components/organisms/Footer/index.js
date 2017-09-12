@@ -39,6 +39,14 @@ const Sessao2 = (props) => (
 					})
 				}
 			</Col>
+			<Col padding margin >
+				<Title.H6>Sumários das ofertas</Title.H6>
+				{
+					props.sumary.map( ( link, index ) => {
+						return <Link margin key = { index } href = { link.href } >{ link.text }</Link>
+					})
+				}
+			</Col>
 		</Row>
 	</Col>
 );

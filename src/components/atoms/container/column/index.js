@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 
+
 export default styled.div`
 	display: flex;
-	height: 100%;
 	flex-direction: column;
 	z-index: 1;
-	background-color: ${props => props.theme.color ? props.theme.color.bg : 'white'};
+	background-color: ${props => props.theme.color ? props.theme.color.bg : 'transparent'};
+	${props => props.transparent && 'background-color: transparent;'}
 	${ props => props.alignLeft && 'align-self: flex-start; text-align: left;'}
 	${ props => props.alignCenter && 'align-items: center; text-align: center;'}
 	${ props => props.alignRight && ' align-items: end;text-align: right;'}
@@ -22,4 +23,32 @@ export default styled.div`
 	${ props => props.size3 && 'width: 33%;'}
 	${ props => props.shadow && 'box-shadow: 0px 0px 30px 0px rgba(204, 204, 204, 0.3);'}
 	${ props => props.zIndex && `z-index: ${props.zIndex}`}
-	`
+	${ props => props.full && `height: 100vh;`}
+	${ props => props.fillHalf && `height: 50vh;`}
+	${ props => props.grow && `flex-grow: 1;`}
+	
+	${ props => props.round && `
+			border-radius: 18px;`
+	}	
+
+	${ props => props.round1 && `
+			border-radius: 18px;
+			border-bottom-right-radius: 0;`
+	}
+ 
+	${ props => props.borderBlue && `
+		border: solid 0.2em;
+		border-color: blue;`
+	}
+ 
+	${ props => props.background && `
+		background: url(${props.background}) center top no-repeat transparent;
+		background-size: cover;
+	`}
+
+	@media (max-width: 900px) {
+		width: 100%;
+	}
+
+
+`

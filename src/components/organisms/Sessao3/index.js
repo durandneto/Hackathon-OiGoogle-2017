@@ -14,7 +14,7 @@ import oiImg2 from './../../../assets/images/feat01.png'
  
 
 const Sessao3 = (props) => (
-	<ContainerColumn margin>
+	<ContainerColumn { ...props }>
 		<ContainerColumn>
 			<IconTitleDescription 
 				size={2} 
@@ -25,7 +25,7 @@ const Sessao3 = (props) => (
 				Title2={['Tem muito mais com','a Banda Larga da Oi']}
 				Description2={'Ao assinar a nossa internet, você também leva:'} />
 		</ContainerColumn>
-		<ContainerRow margin>
+		<ContainerRow margin media>
 			<IconTitleDescription  
 				size={5} 
 				isUpperCase

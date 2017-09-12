@@ -4,4 +4,12 @@ import Container from './../column'
 
 export default Container.extend`
 	${ props => props.reverse && 'flex-direction: row-reverse;'}
-	flex-direction: row;`
+	flex-direction: row;
+
+	${ props => props.media && `
+		@media (max-width: 900px) {
+			flex-direction: column;
+			overflow: hidden;
+		}`
+	}
+`

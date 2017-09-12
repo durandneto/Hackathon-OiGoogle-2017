@@ -2,48 +2,60 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import * as Actions from './../../actions'
+import globalStyle from './../../components/styles/global-styles'
 
-import Task  from './../../components/organisms/Task'
+import HomePage  from './../../components/pages/Home'
 
+const FooterLink = {
+	sumary : [
+		{
+			text: 'Sumary'
+			, href: 'http://oi.com.br'
+		},{
+			text: 'Sumary'
+			, href: 'http://oi.com.br'
+		},{
+			text: 'Sumary'
+			, href: 'http://oi.com.br'
+		},{
+			text: 'Sumary'
+			, href: 'http://oi.com.br'
+		},{
+			text: 'Sumary'
+			, href: 'http://oi.com.br'
+		},{
+			text: 'Sumary'
+			, href: 'http://oi.com.br'
+		}
+	]
+	, regulatory : [
+		{
+			text: 'Regulatory'
+			, href: 'http://oi.com.br'
+		},{
+			text: 'Regulatory'
+			, href: 'http://oi.com.br'
+		},{
+			text: 'Regulatory'
+			, href: 'http://oi.com.br'
+		},{
+			text: 'Regulatory'
+			, href: 'http://oi.com.br'
+		}
+	]
+}
 class Home extends React.Component {
-
-	constructor(props){
-        super(props)
-        this.handleChange = this.handleChange.bind(this)
-        this.onSave = this.onSave.bind(this)
-        this.onDelete = this.onDelete.bind(this)
-    }
-
-	componentWillMount () {
-		this.props.loadTasks()
-	}
-	handleChange(event){
-        this.setState({[event.target.name]: event.target.value})
-    }
-	onSave(){
-        this.props.createTask(this.state)
-    }
-	onDelete(task){
-        this.props.deleteTask(task)
-    }
 
 	render() {
 		return (
-		  <Task 
-		  	tasks={ this.props.Task.get('data')}  
-		  	handleChange={ this.handleChange } 
-		  	onSave = { this.onSave } 
-		  	onDelete = { this.onDelete } 
-		  	/>
+		 	<HomePage FooterLink = { FooterLink }/> 
 		)
 	}
 }
 
 
 function mapStateToProps(state) {
-  return {
-  	Task: state.Task
-  }
+  return {}
 }
 
 function mapDispatchToProps(dispatch) {

@@ -5,6 +5,12 @@ import simplonRegularTTF from '../../assets/fonts/simplon/simplonbp-regular-webf
 import simplonRegularSVG from '../../assets/fonts/simplon/simplonbp-regular-webfont.svg'
 
 injectGlobal`
+html, body, #outlet {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
   @font-face {
     font-family: 'SimplonRegular';
     src: 

@@ -10,11 +10,10 @@ import ContainerColumn from  './../../atoms/container/column'
 import oiImg from './../../../assets/images/bg-sessao-2.png'
 
  
-
 const Sessao2 = (props) => (
-	<ContainerColumn margin>
-		<ContainerRow  {...props} >
-			<ContainerColumn size2 margin>
+	<ContainerColumn {...props} >
+		<ContainerRow media >
+			<ContainerColumn size2 margin >
 				<TitleImage size={4} margin img = { oiImg } text = { ['Tudo pra você ficar','conectado, se divertir','e se informar'] }/> 
 			 </ContainerColumn>
 			 <ContainerColumn size2 margin padding>

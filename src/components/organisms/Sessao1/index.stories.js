@@ -4,9 +4,11 @@ import { storiesOf } from '@storybook/react'
 import { ThemeProvider } from 'styled-components'
 import { ThemePink } from '../../../config/Theme'
 
-import Sessao3 from '.'
+import Sessao1 from '.'
 
-storiesOf('Organisms/Sessao3', module)
+storiesOf('Organisms/Sessao1', module)
 .add('Row Case', () => (
-	<Sessao3 spacedAround margin alignCenter/>
+	<ThemeProvider theme = { ThemePink } >
+		<Sessao1 />
+	</ThemeProvider>
 ));

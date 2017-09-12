@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 import Sessao3 from './../../organisms/Sessao3'
+import Sessao1 from './../../organisms/Sessao1'
 import Sessao2 from './../../organisms/Sessao2'
 import Sessao4 from './../../organisms/Sessao4'
 import Footer from './../../organisms/Footer'
@@ -13,9 +14,10 @@ import Col from  './../../atoms/container/column'
 
 const HomePage = (props) => (
 	<Col>
-		<Sessao2 spacedAround/>
-		<Sessao3 spacedAround margin/>
-		<Sessao4 spacedAround/>
+		<Sessao1 full padding/>
+		<Sessao2/>
+		<Sessao3  margin alignCenter/>
+		<Sessao4 alignCenter/>
 		<Footer { ...props.FooterLink } />
 	</Col>
 );
