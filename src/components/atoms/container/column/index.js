@@ -35,10 +35,23 @@ export default styled.div`
 			border-radius: 18px;
 			border-bottom-right-radius: 0;`
 	}
+
+		${ props => props.borderGreen && `
+		border: solid 0.2em;
+		border-color: #006EBF;`
+	} 
  
 	${ props => props.borderBlue && `
 		border: solid 0.2em;
-		border-color: blue;`
+		border-color: #006EBF;`
+	} 
+ 
+
+
+
+	${ props => props.border && `
+		border: solid 0.2em;
+		border-color: ${props => props.theme.border ? props.theme.border.color : '#909090'};`
 	}
  
 	${ props => props.background && `

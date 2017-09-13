@@ -55,5 +55,9 @@ module.exports = {
     plugins: [
         new ExtractTextPlugin("styles.css"),
         new StaticSiteGeneratorPlugin({entry: 'main', crawl: true}),
-    ]
+    ],
+    externals: {
+        'jsdom': 'window',
+        'cheerio': 'window',
+    }
 };

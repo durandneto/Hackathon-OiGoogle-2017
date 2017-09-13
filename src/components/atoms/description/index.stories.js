@@ -10,6 +10,14 @@ storiesOf('Atoms/Description', module)
         <Description size={2}> Hackathon is Normal size 2</Description>
         <br />
         <Description size={3}> Hackathon is Normal size 3</Description>
+        <br />
+        <Description size={2}> Hackathon is Normal size 3</Description>
+        <br />
+        <Description size={1}> Hackathon is Normal size 3</Description>
+        <br />
+        <Description size={-1}> Hackathon is Normal size 3</Description>
+        <br />
+        <Description size={-2}> Hackathon is Normal size 3</Description>
     </div>
 )) 
 .add('Upper Case', () => (

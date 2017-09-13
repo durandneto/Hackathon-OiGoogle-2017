@@ -31,12 +31,14 @@ storiesOf('Organisms/FormAgenteTeLiga', module)
 .add('Column Case', () => (
 
 <div>
+
 	 <TitleInput.Column 
 	 padding
 		Text={ ['Tem interesse?', 'Fale com um especialista'] }  
 		TextTitle={ 'Nome' }  
 		TextDescription={ 'Telefone' }
 		/>  
+
 	 <ThemeProvider theme={ ThemePink }>
 		 <TitleInput.Column 
 		 padding
@@ -45,5 +47,6 @@ storiesOf('Organisms/FormAgenteTeLiga', module)
 		TextDescription={ 'Telefone' }
 		/>
 	 </ThemeProvider>
+
  </div>
 	));

@@ -17,7 +17,10 @@ module.exports = {
             test: /\.(png|woff|woff2|eot|ttf|svg|jpg)$/,
             loaders: ['file-loader'],
             include: path.resolve(__dirname, '../')
-            },
+            },{
+                test: /\.css$/,
+                use: [ 'style-loader', 'css-loader' ]
+              },
         ],
     },
     externals: {

@@ -19,21 +19,10 @@ module.exports = {
                 use: 'babel-loader',
                 include: __dirname + '/src',
             },
-            {
-                test: /\.css/,
-                use: ExtractTextPlugin.extract({
-                    fallback: 'style-loader',
-                    use: [{
-                        loader: 'css-loader',
-                        options: {
-                            modules: true,
-                            localIdentName: '[path][name]_[local]--[hash:base64:8]',
-                            importLoaders: 1
-                        }
-                    }, 'postcss-loader']
-                }),
-                include: __dirname + '/src'
-            },
+             {
+                test: /\.css$/,
+                use: [ 'style-loader', 'css-loader' ]
+              },
             {
                 test: /\.(jpg|png|svg)/,
                 use: 'file-loader?name=/assets/img-[hash:6].[ext]',

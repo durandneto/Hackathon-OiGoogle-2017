@@ -32,6 +32,12 @@ const Button = styled.button.attrs({
 			 `background-color: ${ props.theme.button.primary.bg};
 			color: ${ props.theme.button.primary.color};` 
 	}
+	{/* info button */}
+	${
+		props => props.info &&
+			 `background-color: silver;
+			color: red;` 
+	}
 
     &:hover {
 	    background: linear-gradient(to right, #cd266f 0%, #fea20c 100%);
@@ -80,4 +86,7 @@ const Button = styled.button.attrs({
 
 `;
 
+const ButtonLink = Button.withComponent('a')
+
 export default Button
+export { ButtonLink, Button }
