@@ -8,21 +8,20 @@ import Img from  './../../atoms/img'
 import Line from  './../../atoms/line'
 
 import oiImg from './../../../assets/images/bg-fixo.png'
-import oiImg3 from './../../../assets/images/icon-fixo-section.png'
 
- 
 
-const Sessao2 = (props) => (
-	<ContainerColumn margin>
-		<ContainerRow  {...props} spacedAround media>
-			<ContainerColumn margin>
-				<Img src = { oiImg } /> 
+
+const Sessao4 = (props) => (
+	<ContainerColumn {...props} >
+		<ContainerRow container>
+			<ContainerColumn alignCenter size2>
+				<Img src={oiImg}/>
 			 </ContainerColumn>
-			 <ContainerColumn  margin padding>
-			    <IconTitleDescription 
-				size={2} 
+			 <ContainerColumn size2 padding>
+			    <IconTitleDescription
+				size={2}
 				img = {{
-					 src: oiImg3
+					 type: 'product-fixo'
 				}}
 				alignLeft
 				Title2={[
@@ -34,8 +33,8 @@ const Sessao2 = (props) => (
 				Description2={'Além do fixo ilimitado pra Oi, você tem ainda uma franquia de minutos pra outras operadoras. E se já tiver fixo de outra operadora, é só falar com nossos atendentes pra trazer seu número pra Oi.'} />
 			 </ContainerColumn>
 		</ContainerRow>
-		<Line margin/>
+		<Line noMargin/>
 	</ContainerColumn>
 );
 
-export default Sessao2
+export default Sessao4

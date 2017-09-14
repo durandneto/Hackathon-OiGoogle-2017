@@ -19,9 +19,11 @@ export default styled.div`
 	${ props => props.margin2 && 'margin: 2em;'}
 	${ props => props.padding && 'padding: 1em;'}
 	${ props => props.reverse && 'flex-direction: column-reverse;'}
+	${ props => props.wrap && 'flex-wrap: wrap;'}
+	${ props => props.sizeFull && 'width: 100%;'}
 	${ props => props.size2 && 'width: 50%;'}
 	${ props => props.size3 && 'width: 33%;'}
-	${ props => props.size4 && 'width: 20%;'}
+	${ props => props.size4 && 'width: 15%;'}
 	${ props => props.shadow && 'box-shadow: 0px 0px 30px 0px rgba(204, 204, 204, 0.3);'}
 	${ props => props.zIndex && `z-index: ${props.zIndex}`}
 	${ props => props.full && `height: 100vh;`}

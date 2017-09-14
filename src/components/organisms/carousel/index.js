@@ -16,8 +16,8 @@ import oiImg3 from './../../../assets/images/icon-fixo-section.png'
 const Carousel1 = (props) => (
 	<Row alignCenter>
 		<Col size2 margin padding>
-			    <IconTitleDescription 
-				size={2} 
+			    <IconTitleDescription
+				size={2}
 				img = {{
 					 src: oiImg3
 				}}

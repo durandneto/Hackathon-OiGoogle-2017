@@ -22,4 +22,8 @@ export default Col.extend`
 		@media (min-width: 1920px) { width: 1170px; };
 	`
 	}
+
+	${ props => props.marginBottom && `
+		margin: 0 auto 2em;
+	`}
 `
