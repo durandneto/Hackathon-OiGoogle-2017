@@ -1,53 +1,43 @@
 import React from 'react'
-import Coverflow from 'react-coverflow'
-import {StyleRoot} from 'radium';
+import Slider from 'react-slick'
 
-import Col from  './../../atoms/container/column'
-import Row from  './../../atoms/container/row'
-import IconTitleDescription from  './../../molecules/IconTitleDescription'
+//import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick.css";
+//import "slick-carousel/slick/slick-theme.css";
+//import 'react-responsive-carousel/lib/styles/carousel.min.css'
+import tvch01 from './../../../assets/images/tvch01.png'
+import tvch02 from './../../../assets/images/tvch02.png'
+import tvch03 from './../../../assets/images/tvch03.png'
+import tvch04 from './../../../assets/images/tvch04.png'
+import Img from  './../../atoms/img'
 
-const  bgHero = 'http://www.codeproject.com/KB/GDI-plus/ImageProcessing2/img.jpg'
+const settings = {
+	dots: true,
+  infinite: false,
+  speed: 500,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+	lazyLoad: true,
+	slidesToShow: 3,
+	dots: false,
+	arrows: false
+};
 
-import { Carousel } from 'react-responsive-carousel'
-import 'react-responsive-carousel/lib/styles/carousel.min.css'
-
-import oiImg3 from './../../../assets/images/icon-fixo-section.png'
-
-const Carousel1 = (props) => (
-	<Row alignCenter>
-		<Col size2 margin padding>
-			    <IconTitleDescription 
-				size={2} 
-				img = {{
-					 src: oiImg3
-				}}
-				alignLeft
-				Title2={[
-						'Você e sua família'
-						, 'têm os melhores'
-						, 'canais dentro do'
-						, 'Combo'
-						]}
-				Description2={['Conteúdos pra todos os','gostos e idades.']} />
-		</Col>
-		<Col size2>
-		<Carousel>
-        <div>
-            <img src= { bgHero } />
-            <p className="legend">Legend 1</p>
-        </div>
-        <div>
-            <img src= { bgHero } />
-            <p className="legend">Legend 2</p>
-        </div>
-        <div>
-            <img src= { bgHero } />
-            <p className="legend">Legend 3</p>
-        </div>
-    </Carousel>
-
-    </Col>
-	</Row>
+const Carousel = (props) => (
+	<Slider {...settings}>
+		<div>
+			<Img src = { tvch01 } />
+		</div>
+		<div>
+			<Img src = { tvch02 } />
+		</div>
+		<div>
+			<Img src = { tvch03 } />
+		</div>
+		<div>
+			<Img src = { tvch04 } />
+		</div>
+	</Slider>
 );
 
-export default Carousel1
+export default Carousel
