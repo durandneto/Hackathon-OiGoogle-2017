@@ -1,11 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import ContainerColumn from  './../../atoms/container/column'
+import ContainerRow from  './../../atoms/container/row'
 import IconTitleDescription from  './../../molecules/IconTitleDescription'
 import Img from  './../../atoms/img'
 import Line from  './../../atoms/line'
-import ContainerRow from  './../../atoms/container/row'
-import ContainerColumn from  './../../atoms/container/column'
 
 import oiImg from './../../../assets/images/bg-fixo.png'
 import oiImg3 from './../../../assets/images/icon-fixo-section.png'

@@ -1,20 +1,15 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import ContainerColumn from  './../../atoms/container/column'
+import ContainerRow from  './../../atoms/container/row'
 import TitleImage from  './../../molecules/TitleImg'
 import IconTitleDescription from  './../../molecules/IconTitleDescription'
 import Line from  './../../atoms/line'
-import ContainerRow from  './../../atoms/container/row'
-import ContainerColumn from  './../../atoms/container/column'
-
-const Wrapper = styled.div`
-	margin: 0 auto;
-	${props => props.maxWidth && 'max-width: 1280px'}
-`;
 
 const Sessao3 = (props) => (
-	<Wrapper maxWidth>
-		<ContainerColumn { ...props }>
+	<ContainerColumn {...props} >
+		<ContainerRow container>
 			<ContainerColumn>
 				<IconTitleDescription
 					size={2}
@@ -87,9 +82,9 @@ const Sessao3 = (props) => (
 					Title2={'Oi Educa'}
 					Description2={'Reforço do ensino infantil ao vestibular'} />
 			</ContainerRow>
-			<Line margin />
-		</ContainerColumn>
-	</Wrapper>
+		</ContainerRow>
+		<Line margin />
+	</ContainerColumn>
 );
 
 export default Sessao3

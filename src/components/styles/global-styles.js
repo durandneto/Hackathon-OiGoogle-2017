@@ -105,5 +105,7 @@ injectGlobal`
     text-shadow: rgba(0, 0, 0, .01) 0 0 1px;
     box-sizing: border-box;
   }
-
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
 `;

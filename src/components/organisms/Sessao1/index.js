@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import ContainerColumn from  './../../atoms/container/column'
+import ContainerRow from  './../../atoms/container/row'
 import BreadCrumb from  './../BreadCrumb'
-import Row from  './../../atoms/container/row'
-import Col from  './../../atoms/container/column'
 import Price from  './../../molecules/card/price'
 import Description from  './../../atoms/description'
 import * as Title from  './../../atoms/title'
@@ -21,18 +21,17 @@ const links = [{
  
 
 const Sessao1 = (props) => (
-	<Col fillHalf background = { bgHero } transparent >
-		<Row  transparent alignCenter margin> 
+	<ContainerColumn fillHalf background = { bgHero } transparent >
+		<ContainerRow container> 
 			<BreadCrumb   links = { links }/>
-		</Row>
-		<Row transparent grow margin> 
-			<Col transparent alignCenter    >
+		</ContainerRow>
+		<ContainerRow container> 
+			<ContainerColumn transparent alignCenter    >
 				<Title.H1  isUpperCase>Você pode fazer muito com 15 Mega</Title.H1>
-			</Col>
-			 
-		</Row>
-		<Row  transparent  margin   >  
-			<Col alignEnd>
+			</ContainerColumn>
+		</ContainerRow>
+		<ContainerRow container>  
+			<ContainerColumn alignEnd>
 				<Price
 					preffix = { 'por apenas:' }
 					monetary = { 'R$' }
@@ -41,12 +40,12 @@ const Sessao1 = (props) => (
 				  	suffix={'Mês'}
 				  	separator={','}
 				 />
-			</Col>
-			<Col  alignEnd margin>
+			</ContainerColumn>
+			<ContainerColumn container>
 				<Description size = { -1 } >Valor no Oi Total Intermediário: R$ 199,90/mês</Description>
-			</Col>
-		</Row>
-	</Col>
+			</ContainerColumn>
+		</ContainerRow>
+	</ContainerColumn>
 );
 
 export default Sessao1
