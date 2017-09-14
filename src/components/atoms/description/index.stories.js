@@ -19,7 +19,7 @@ storiesOf('Atoms/Description', module)
         <br />
         <Description size={-2}> Hackathon is Normal size 3</Description>
     </div>
-)) 
+))
 .add('Upper Case', () => (
     <div>
         <Description isUpperCase  > Hackathon is UpperCase size 1</Description>
@@ -48,4 +48,4 @@ storiesOf('Atoms/Description', module)
 ))
 .add('Font scale Size 3', () => (
   <Description size={3}  > Hackathon Size 3</Description>
-)) ; 
+)) ;

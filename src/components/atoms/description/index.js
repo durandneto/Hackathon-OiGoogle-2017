@@ -31,11 +31,11 @@ const calcSize = (size) => {
 	case 1:
 	default:
 		return '100%'
-	} 
+	}
 }
 
 export default styled.p`
-	font-family: SimplonRegular;
+	font-family: Simplon;
 	margin:0;
 	padding:0;
 	color: ${ props => props.theme.color && props.theme.color.description ? props.theme.color.description : '#909090'};

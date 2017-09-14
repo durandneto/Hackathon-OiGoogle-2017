@@ -3,6 +3,7 @@ import { storiesOf, configure, addDecorator, setAddon } from '@storybook/react'
 import { action } from '@storybook/addon-actions';
 import { linkTo } from '@storybook/addon-links';
 import infoAddon from '@storybook/addon-info';
+import globalStyle from '../src/components/styles/global-styles'
 
 import { specs, describe, it } from 'storybook-addon-specifications'
 

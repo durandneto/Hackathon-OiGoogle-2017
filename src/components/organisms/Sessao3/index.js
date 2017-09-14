@@ -7,79 +7,69 @@ import Line from  './../../atoms/line'
 import ContainerRow from  './../../atoms/container/row'
 import ContainerColumn from  './../../atoms/container/column'
 
-import oiImg from './../../../assets/images/bg-sessao-2.png'
-import oiImg3 from './../../../assets/images/icon-bl-section.png'
-import oiImg2 from './../../../assets/images/feat01.png'
-
- 
 
 const Sessao3 = (props) => (
 	<ContainerColumn { ...props }>
 		<ContainerColumn>
-			<IconTitleDescription 
-				size={2} 
+			<IconTitleDescription
+				size={2}
 				img = {{
-					 src: oiImg3
+					 type: 'product-bandalarga'
 				}}
 				alignCenter
 				Title2={['Tem muito mais com','a Banda Larga da Oi']}
 				Description2={'Ao assinar a nossa internet, você também leva:'} />
 		</ContainerColumn>
 		<ContainerRow margin media>
-			<IconTitleDescription  
-				size={5} 
+			<IconTitleDescription
+				size={5}
+				margin2
 				isUpperCase
-				alignCenter 
+				alignCenter
 				img = {{
-					
-					 src: oiImg2
-					, margin: 2
+					type: 'feat-modem'
 				}}
-				Title2={'Modem Grátis'} 
+				Title2={'Modem Grátis'}
 				Description2={'Conecte seus aparelhos dentro de casa'} />
-			<IconTitleDescription  
-				size={5} 
+			<IconTitleDescription
+				size={5}
+				margin2
 				isUpperCase
-				alignCenter 
+				alignCenter
 				img = {{
-					
-					 src: oiImg2
-					, margin: 2
+					type: 'feat-cloud'
 				}}
-				Title2={'Modem Grátis'} 
+				Title2={'Modem Grátis'}
 				Description2={'Conecte seus aparelhos dentro de casa'} />
-			<IconTitleDescription  
-				size={5} 
+			<IconTitleDescription
+				size={5}
+				margin2
 				isUpperCase
-				alignCenter 
+				alignCenter
 				img = {{
-					
-					 src: oiImg2
-					, margin: 2
+					type: 'feat-wifi'
 				}}
-				Title2={'Modem Grátis'} 
+				Title2={'Modem Grátis'}
 				Description2={'Conecte seus aparelhos dentro de casa'} />
-			<IconTitleDescription  
-				size={5} 
+			<IconTitleDescription
+				size={5}
+				margin2
 				isUpperCase
-				alignCenter 
+				alignCenter
 				img = {{
-					
-					 src: oiImg2
-					, margin: 2
+					type: 'feat-antivirus'
 				}}
-				Title2={'Modem Grátis'} 
+				Title2={'Modem Grátis'}
 				Description2={'Conecte seus aparelhos dentro de casa'} />
-			<IconTitleDescription  
-				size={5} 
+			<IconTitleDescription
+				size={5}
+				margin2
 				isUpperCase
-				alignCenter 
+				alignCenter
 				img = {{
-					
-					 src: oiImg2
-					, margin: 2
+					type: 'feat-certificate'
 				}}
-				Title2={'Modem Grátis'} 
+				Title2={'Modem Grátis'}
 				Description2={'Conecte seus aparelhos dentro de casa'} />
 		</ContainerRow>
 		<Line margin />

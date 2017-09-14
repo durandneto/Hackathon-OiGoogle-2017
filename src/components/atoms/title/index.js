@@ -6,7 +6,7 @@ const AmpH2 = (props) => (
 )
 
 const H1 = styled.h1`
-	font-family: SimplonRegular;
+	font-family: SimplonHeadline;
 	width: 100%;
 	margin:0;
 	padding:0;
@@ -20,9 +20,9 @@ const H1 = styled.h1`
 	& * {
 		color: ${ props => props.theme.color && props.theme.color.title ? props.theme.color.title : '#000'};
 	}
-` 
+`
 const H2 = styled.h2`
-	font-family: SimplonRegular;
+	font-family: SimplonHeadline;
 	width: 100%;
 	margin:0;
 	padding:0;
@@ -36,9 +36,9 @@ const H2 = styled.h2`
 	& * {
 		color: ${ props => props.theme.color && props.theme.color.title ? props.theme.color.title : '#000'};
 	}
-` 
+`
 const H3 = styled.h3`
-	font-family: SimplonRegular;
+	font-family: SimplonHeadline;
 	width: 100%;
 	margin:0;
 	padding:0;
@@ -52,9 +52,9 @@ const H3 = styled.h3`
 	& * {
 		color: ${ props => props.theme.color && props.theme.color.title ? props.theme.color.title : '#000'};
 	}
-` 
+`
 const H4 = styled.h4`
-	font-family: SimplonRegular;
+	font-family: SimplonHeadline;
 	width: 100%;
 	margin:0;
 	padding:0;
@@ -68,9 +68,9 @@ const H4 = styled.h4`
 	& * {
 		color: ${ props => props.theme.color && props.theme.color.title ? props.theme.color.title : '#000'};
 	}
-` 
+`
 const H5 = styled.h5`
-	font-family: SimplonRegular;
+	font-family: SimplonHeadline;
 	width: 100%;
 	margin:0;
 	padding:0;
@@ -84,9 +84,9 @@ const H5 = styled.h5`
 	& * {
 		color: ${ props => props.theme.color && props.theme.color.title ? props.theme.color.title : '#000'};
 	}
-` 
+`
 const H6 = styled.h6`
-	font-family: SimplonRegular;
+	font-family: SimplonHeadline;
 	width: 100%;
 	margin:0;
 	padding:0;
@@ -100,6 +100,6 @@ const H6 = styled.h6`
 	& * {
 		color: ${ props => props.theme.color && props.theme.color.title ? props.theme.color.title : '#000'};
 	}
-` 
+`
 export default H2
 export { H1, H2, H3, H4, H5, H6 }
