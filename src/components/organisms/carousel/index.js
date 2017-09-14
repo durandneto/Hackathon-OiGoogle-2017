@@ -9,7 +9,8 @@ import IconTitleDescription from  './../../molecules/IconTitleDescription'
 const  bgHero = 'http://www.codeproject.com/KB/GDI-plus/ImageProcessing2/img.jpg'
 
 import { Carousel } from 'react-responsive-carousel'
-import styles from 'react-responsive-carousel/lib/styles/carousel.min.css'
+import 'react-responsive-carousel/lib/styles/carousel.min.css'
+
 import oiImg3 from './../../../assets/images/icon-fixo-section.png'
 
 const Carousel1 = (props) => (

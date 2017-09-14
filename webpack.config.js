@@ -42,7 +42,7 @@ module.exports = {
     },
     watch: true,
     plugins: [
-        new ExtractTextPlugin("styles.css"),
+        // new ExtractTextPlugin("styles.css"),
         new StaticSiteGeneratorPlugin({entry: 'main', crawl: true}),
         new BrowserSyncPlugin({
             host: 'localhost',
