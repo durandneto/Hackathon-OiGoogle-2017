@@ -59,10 +59,4 @@ export default styled.div`
 		background: url(${props.background}) center top no-repeat transparent;
 		background-size: cover;
 	`}
-
-	@media (max-width: 900px) {
-		width: 100%;
-	}
-
-
 `

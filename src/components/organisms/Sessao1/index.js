@@ -18,17 +18,44 @@ const links = [{
 	href: '#'	
 	, text: '15 mega no combo'
 }]
- 
+
+const Headline = styled.div`
+	letter-spacing: -4px;
+	line-height: .95;
+	@media (max-width: 767px) {
+		margin-top: 15px;
+		font-size: 20px;
+		letter-spacing: -2px;
+		width: 298px;
+	};
+	@media (min-width: 768px) {
+		margin-top: 20px;
+		font-size: 29px;
+		letter-spacing: -3.5px;
+		line-height: .95;
+		width: 68%;
+	};
+	@media (min-width: 992px) {
+		margin-top: 25px;
+		font-size: 30px;
+		width: 55%;
+	};
+	@media (min-width: 1920px) {
+		margin-top: 30px;
+		font-size: 33px;
+		width: 620px;
+	};
+`;
 
 const Sessao1 = (props) => (
 	<ContainerColumn fillHalf background = { bgHero } transparent >
 		<ContainerRow container> 
-			<BreadCrumb   links = { links }/>
+			<BreadCrumb links = { links }/>
 		</ContainerRow>
-		<ContainerRow container> 
-			<ContainerColumn transparent alignCenter    >
-				<Title.H1  isUpperCase>Você pode fazer muito com 15 Mega</Title.H1>
-			</ContainerColumn>
+		<ContainerRow container>
+			<Headline>
+				<Title.H1 fontNormal='true' color='#fff' colorChild='#f0c000' isUpperCase>Você pode fazer muito com <span>15 Mega</span></Title.H1>
+			</Headline>
 		</ContainerRow>
 		<ContainerRow container>  
 			<ContainerColumn alignEnd>

@@ -5,9 +5,9 @@ import Col from './../column'
 export default Col.extend`
 	${ props => props.reverse && 'flex-direction: row-reverse;'}
 	flex-direction: row;
-	width: 100%;
 
 	${ props => props.container && `
+		width: 100%;
 		padding-right: 15px;
 		padding-left: 15px;
 		margin: 0 auto;
