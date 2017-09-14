@@ -5,6 +5,7 @@
   "main": "./src/index.js",
   "scripts": {
     "dev": "webpack",
+    "serve-prod": "cd dist && python -m SimpleHTTPServer",
     "build": "webpack --config webpack.prod.config.js --progress -p",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
@@ -25,6 +26,7 @@
     "file-loader": "^0.11.2",
     "history": "^4.7.2",
     "humps": "^2.0.1",
+    "isomorphic-style-loader": "^4.0.0",
     "postcss-loader": "^2.0.6",
     "radium": "^0.19.4",
     "react": "^15.6.1",
