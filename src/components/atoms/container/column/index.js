@@ -28,6 +28,7 @@ export default styled.div`
 	${ props => props.zIndex && `z-index: ${props.zIndex}`}
 	${ props => props.full && `height: 100vh;`}
 	${ props => props.fillHalf && `height: 50vh;`}
+	${ props => props.fill75 && `height: 75vh;`}
 	${ props => props.grow && `flex-grow: 1;`}
 
 	${ props => props.round && `

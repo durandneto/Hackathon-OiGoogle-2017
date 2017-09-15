@@ -48,7 +48,7 @@ const Headline = styled.div`
 `;
 
 const Sessao1 = (props) => (
-	<ContainerColumn fillHalf background = { bgHero } transparent >
+	<ContainerColumn fill75 background = { bgHero } transparent >
 		<ContainerRow container> 
 			<BreadCrumb links = { links }/>
 		</ContainerRow>
