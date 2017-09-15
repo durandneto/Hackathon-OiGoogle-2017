@@ -5,11 +5,14 @@ var StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin');
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 var ss = require('./src/ss_routes');
 
+const PROD = JSON.parse(process.env.PROD_ENV || '0');
+
+
 module.exports = {
     entry: './src/index',
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'bundle.js',
+        filename: PROD ? 'bundle.min.js' : 'bundle.js',
         libraryTarget: 'umd'
     },
     module: {
@@ -42,7 +45,12 @@ module.exports = {
     },
     watch: true,
     plugins: [
-        // new ExtractTextPlugin("styles.css"),
+        PROD ? [
+            new webpack.optimize.UglifyJsPlugin({
+              compress: { warnings: false }
+            })
+          ] : [],
+        new ExtractTextPlugin("styles.css"),
         new StaticSiteGeneratorPlugin({entry: 'main', crawl: true}),
         new BrowserSyncPlugin({
             host: 'localhost',
