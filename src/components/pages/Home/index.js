@@ -5,6 +5,7 @@ import Sessao3 from './../../organisms/Sessao3'
 import Sessao1 from './../../organisms/Sessao1'
 import Sessao2 from './../../organisms/Sessao2'
 import Sessao4 from './../../organisms/Sessao4'
+import Sessao5 from './../../organisms/Sessao5'
 import Footer from './../../organisms/Footer'
 
 import Carousel from './../../organisms/Carousel'
@@ -31,10 +32,11 @@ const HomePage = (props) => (
 		<Sessao2/>
 		<Sessao3 margin padding alignCenter/>
 		<Sessao4 alignCenter/>
-    <Carousel {...settings } images={[
-      {'src': img1},
-      {'src': img2}
-    ]}/>
+		<Sessao5 margin padding alignCenter/>
+	    <Carousel {...settings } images={[
+	      {'src': img1},
+	      {'src': img2}
+	    ]}/>
 		<Footer { ...props.FooterLink } />
 	</Col>
 );
