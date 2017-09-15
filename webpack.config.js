@@ -4,6 +4,8 @@ var ExtractTextPlugin = require("extract-text-webpack-plugin");
 var StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin');
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 var ss = require('./src/ss_routes');
+var CompressionPlugin = require('compression-webpack-plugin');
+
 
 module.exports = {
     entry: './src/index',
@@ -42,7 +44,6 @@ module.exports = {
     },
     watch: true,
     plugins: [
-        // new ExtractTextPlugin("styles.css"),
         new StaticSiteGeneratorPlugin({entry: 'main', crawl: true}),
         new BrowserSyncPlugin({
             host: 'localhost',
@@ -50,6 +51,13 @@ module.exports = {
             server: {
                 baseDir: ['dist']
             }
-        })
+        }),
+        new CompressionPlugin({
+            asset: "[path].gz[query]",
+            algorithm: "gzip",
+            test: /\.js$|\.css$|\.html$/,
+            threshold: 10240,
+            minRatio: 0.8
+          })
     ]
 };

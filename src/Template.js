@@ -14,7 +14,7 @@ export default class Template extends React.Component {
             <div id='outlet'>
                   {this.props.children}
             </div>
-            <script src="/bundle.js"></script>
+            <script async src="/bundle.js"></script>
         </body>
       </html>
     )
