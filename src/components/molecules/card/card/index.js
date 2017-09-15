@@ -33,7 +33,7 @@ const Bg = styled.div`
 const Card = (props) => (
 	<Col size3 padding shadow zIndex={ props.highlight ? 2 : 1 }>
 		<Col alignCenter>
-			<CardTitle { ...props.CardTitle } /> 
+			<CardTitle { ...props.CardTitle } />
 			<Price { ...props.CardPrice } />
 		</Col>
 		<Col>
@@ -44,10 +44,10 @@ const Card = (props) => (
 			}
 		</Col>
 		<Col alignCenter>
-			<Button full>Assine já</Button>
+			<Button >Assine já</Button>
 		</Col>
 
 	</Col>
 );
-			 		
+
 export default Card
