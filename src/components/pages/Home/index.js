@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { ThemeProvider } from 'styled-components'
 
 import Sessao3 from './../../organisms/Sessao3'
 import Sessao1 from './../../organisms/Sessao1'
@@ -8,12 +8,14 @@ import Sessao4 from './../../organisms/Sessao4'
 import Sessao5 from './../../organisms/Sessao5'
 import Footer from './../../organisms/Footer'
 
-import Carousel from './../../organisms/Carousel'
 import img1 from './../../../assets/images/tvch01.png'
 import img2 from './../../../assets/images/tvch02.png'
 
 import Row from  './../../atoms/container/row'
 import Col from  './../../atoms/container/column'
+
+import { ThemePink } from './../../../config/Theme'
+import * as FormAgenteTeLiga from './../../organisms/FormAgenteTeLiga'
 
 const settings = {
   infinite: true,
@@ -33,11 +35,16 @@ const HomePage = (props) => (
 		<Sessao3 margin padding alignCenter/>
 		<Sessao4 alignCenter/>
 		<Sessao5 margin padding alignCenter/>
-	    <Carousel {...settings } images={[
-	      {'src': img1},
-	      {'src': img2}
-	    ]}/>
 		<Footer { ...props.FooterLink } />
+		<ThemeProvider theme={ ThemePink }>
+			 <FormAgenteTeLiga.Row 
+			 padding
+			 spaced
+			Text={ ['Tem interesse?', 'Fale com um especialista'] }  
+			TextTitle={ 'Nome' }  
+			TextDescription={ 'Telefone' }
+			/>
+		 </ThemeProvider>
 	</Col>
 );
 

@@ -5,7 +5,7 @@ import styled from 'styled-components'
 const Button = styled.button.attrs({
 	// or we can define dynamic ones
 	margin: props => props.size || '0;',
-	padding: props => props.size || '2em;'
+	padding: props => props.size || '1em;'
 })`
 
 	/* here we use the dynamically computed props */

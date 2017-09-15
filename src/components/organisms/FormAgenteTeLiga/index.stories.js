@@ -4,12 +4,12 @@ import { storiesOf } from '@storybook/react'
 import { ThemeProvider } from 'styled-components'
 import { ThemePink } from '../../../config/Theme'
 
-import * as TitleInput from '.'
+import * as FormAgenteTeLiga from '.'
 
 storiesOf('Organisms/FormAgenteTeLiga', module)
 .add('Row Case', () => (
 <div>
-	 <TitleInput.Row 
+	 <FormAgenteTeLiga.Row 
 	 padding
 	 spaced
 		Text={ ['Tem interesse?', 'Fale com um especialista'] }  
@@ -17,7 +17,7 @@ storiesOf('Organisms/FormAgenteTeLiga', module)
 		TextDescription={ 'Telefone' }
 		/>  
 	 <ThemeProvider theme={ ThemePink }>
-		 <TitleInput.Row 
+		 <FormAgenteTeLiga.Row 
 		 padding
 		 spaced
 		Text={ ['Tem interesse?', 'Fale com um especialista'] }  
@@ -31,8 +31,7 @@ storiesOf('Organisms/FormAgenteTeLiga', module)
 .add('Column Case', () => (
 
 <div>
-
-	 <TitleInput.Column 
+	 <FormAgenteTeLiga.Column 
 	 padding
 		Text={ ['Tem interesse?', 'Fale com um especialista'] }  
 		TextTitle={ 'Nome' }  
@@ -40,7 +39,7 @@ storiesOf('Organisms/FormAgenteTeLiga', module)
 		/>  
 
 	 <ThemeProvider theme={ ThemePink }>
-		 <TitleInput.Column 
+		 <FormAgenteTeLiga.Column 
 		 padding
 		Text={ ['Tem interesse?', 'Fale com um especialista'] }  
 		TextTitle={ 'Nome' }  
