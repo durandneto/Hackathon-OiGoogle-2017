@@ -17,7 +17,7 @@ class Footer extends Component {
 	constructor(props){
         super(props);
         this.state = {
-        	openedLinks: true
+        	openedLinks: false
         }
 
         this._toggleShowLinks = this._toggleShowLinks.bind(this)
