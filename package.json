@@ -7,6 +7,7 @@
     "dev": "webpack",
     "serve-prod": "cd dist && python -m SimpleHTTPServer",
     "build": "webpack --config webpack.prod.config.js --progress -p",
+    "deploy": "cd deploy",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
