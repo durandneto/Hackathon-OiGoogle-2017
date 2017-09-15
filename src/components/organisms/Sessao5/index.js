@@ -18,22 +18,84 @@ const CardTitle = {
 	, subTitle: 'INTERMEDIÁRIO'
 }
 
+const CardTitle2 = {
+	title: 'OI TOTAL COMPLETO'
+	, subTitle: 'INTERMEDIÁRIO'
+}
+
+const CardTitle3 = {
+	title: 'OI TOTAL CONECTADO'
+	, subTitle: 'INTERMEDIÁRIO'
+}
+
 const CardPrice = {
 	value: '199'
 	, cents: '90'
 	, suffix: 'Mês'
 	, separator: ','
 }
-const CardLine = [{
-	src: oiImg 
-	, description: '161 canais, 51 em HD'
-},{
-	src: oiImg2
-	, description: 'Ilimitado pra fixo de todo o Brasil'
-},{
-	src: oiImg3 
-	, description: '15 mega'
+
+const CardPrice2 = {
+	value: '279'
+	, cents: '90'
+	, suffix: 'Mês'
+	, separator: ','
+}
+
+const CardPrice3 = {
+	value: '199'
+	, cents: '90'
+	, suffix: 'Mês'
+	, separator: ','
+}
+
+const CardLine = [
+	{
+		icon: 'product-tv',
+		description: '161 canais, 51 em HD'
+	},
+	{
+		icon: 'product-fixo',
+		description: 'Ilimitado pra fixo de todo o Brasil'
+	},
+	{
+		icon: 'product-bandalarga',
+		description: '15 mega'
 }]
+
+const CardLine2 = [
+	{
+		icon: 'product-tv',
+		description: '161 canais, 51 em HD'
+	},
+	{
+		icon: 'product-pos',
+		description: '5 GB de internet'
+	},
+	{
+		icon: 'product-bandalarga',
+		description: '15 mega'
+	},
+	{
+		icon: 'product-fixo',
+		description: 'Ilimitado pra fixo de todo o Brasil'
+	}
+]
+
+const CardLine3 = [
+	{
+		icon: 'product-tv',
+		description: '5 GB de internet'
+	},
+	{
+		icon: 'product-bandalarga',
+		description: '15 mega'
+	},
+	{
+		icon: 'product-fixo',
+		description: 'Ilimitado pra fixo de todo o Brasil'
+	}
+]
 
 
 const Sessao5 = (props) => (
@@ -46,8 +108,8 @@ const Sessao5 = (props) => (
 						type: 'product-bandalarga'
 					}}
 					alignCenter
-					Title2={['Tem muito mais com','a Banda Larga da Oi']}
-					Description2={'Ao assinar a nossa internet, você também leva:'} />
+					Title2={['Assine um dos nossos Combos']}
+					Description2={'Escolha a opção que mais se adequa ao seu perfil e aproveite.'} />
 			</ContainerColumn>
 		</ContainerRow>
 		<ContainerRow marginBottom container spaced>
@@ -58,14 +120,14 @@ const Sessao5 = (props) => (
 			 />
 			<Card
 				highlight
-			  	CardTitle = { CardTitle }
-			  	CardPrice = { CardPrice }
-			  	CardLine = { CardLine }
+			  	CardTitle = { CardTitle2 }
+			  	CardPrice = { CardPrice2 }
+			  	CardLine = { CardLine2 }
 			 />
 			<Card
-			  	CardTitle = { CardTitle }
-			  	CardPrice = { CardPrice }
-			  	CardLine = { CardLine }
+			  	CardTitle = { CardTitle3 }
+			  	CardPrice = { CardPrice3 }
+			  	CardLine = { CardLine3 }
 			 />
 		</ContainerRow>
 		<Line noMargin />
