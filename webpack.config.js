@@ -4,15 +4,14 @@ var ExtractTextPlugin = require("extract-text-webpack-plugin");
 var StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin');
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 var ss = require('./src/ss_routes');
-
-const PROD = JSON.parse(process.env.PROD_ENV || '0');
+var CompressionPlugin = require('compression-webpack-plugin');
 
 
 module.exports = {
     entry: './src/index',
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: PROD ? 'bundle.min.js' : 'bundle.js',
+        filename: 'bundle.js',
         libraryTarget: 'umd'
     },
     module: {
@@ -45,12 +44,15 @@ module.exports = {
     },
     watch: true,
     plugins: [
-        PROD ? [
-            new webpack.optimize.UglifyJsPlugin({
-              compress: { warnings: false }
-            })
-          ] : [],
-        new ExtractTextPlugin("styles.css"),
+        new webpack.DefinePlugin({
+            PRODUCTION: JSON.stringify(true),
+            BROWSER_SUPPORTS_HTML5: true,
+            TWO: "1+1",
+            "typeof window": JSON.stringify("object")
+          }),
+        new webpack.optimize.DedupePlugin(), //dedupe similar code 
+        new webpack.optimize.UglifyJsPlugin(), //minify everything
+        new webpack.optimize.AggressiveMergingPlugin(), //Merge chunks
         new StaticSiteGeneratorPlugin({entry: 'main', crawl: true}),
         new BrowserSyncPlugin({
             host: 'localhost',
@@ -58,6 +60,13 @@ module.exports = {
             server: {
                 baseDir: ['dist']
             }
-        })
+        }),
+        new CompressionPlugin({
+            asset: "[path].gz[query]",
+            algorithm: "gzip",
+            test: /\.js$|\.css$|\.html$/,
+            threshold: 10240,
+            minRatio: 0.8
+          })
     ]
 };
