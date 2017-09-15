@@ -8,16 +8,16 @@ import Price from  './../../molecules/card/price'
 import Description from  './../../atoms/description'
 import * as Title from  './../../atoms/title'
 
-import oiImg from './../../../assets/images/logo-orange.png'
+import oiImg from './../../../assets/images/logo-orange.svg'
 import bgHero from './../../../assets/images/bg-hero.jpg'
 import bgHeroTablet from './../../../assets/images/bg-hero@2x.jpg'
 import bgHeroDesktop from './../../../assets/images/bg-hero@3x.jpg'
 
 const links = [{
-	href: '#'	
+	href: '#'
 	, text: 'banda larga'
 },{
-	href: '#'	
+	href: '#'
 	, text: '15 mega no combo'
 }]
 
@@ -89,13 +89,18 @@ const ContainerPrice = styled.div`
 `;
 
 const Sessao1 = (props) => (
+<<<<<<< Updated upstream
 	<ContainerColumn fill75 backgroundMedia = {{
 		mobile: bgHero
 		, tablet: bgHeroTablet
 		, desktop: bgHeroDesktop
 
 	}} transparent >
-		<ContainerRow container> 
+		<ContainerRow container>
+=======
+	<ContainerColumn fill75 background = { bgHero } transparent >
+		<ContainerRow container>
+>>>>>>> Stashed changes
 			<BreadCrumb links = { links }/>
 		</ContainerRow>
 		<ContainerRow container>
@@ -103,7 +108,7 @@ const Sessao1 = (props) => (
 				<Title.H1 fontNormal='true' color='#fff' colorChild='#f0c000' isUpperCase>Você pode fazer muito com <span>15 Mega</span></Title.H1>
 			</Headline>
 		</ContainerRow>
-		<ContainerRow container>  
+		<ContainerRow container>
 			<ContainerPrice>
 				<Price
 					preffix = { 'por apenas:' }

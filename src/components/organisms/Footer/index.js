@@ -11,7 +11,7 @@ import Link from  './../../atoms/link'
 import * as Title from  './../../atoms/title'
 import Col from  './../../atoms/container/column'
 
-import oiImg from './../../../assets/images/logo-orange.png'
+import oiImg from './../../../assets/images/logo-orange.svg'
 
 class Footer extends Component {
 	constructor(props){
@@ -56,7 +56,7 @@ class Footer extends Component {
 									})
 								}
 							</Col>
-							
+
 						</Row>
 				}
 			</Col>

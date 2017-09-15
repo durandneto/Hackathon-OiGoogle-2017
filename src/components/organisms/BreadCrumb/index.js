@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 import Img from  './../../atoms/img'
 import Row from  './../../atoms/container/row'
-import oiImg from './../../../assets/images/logo-orange.png'
+import oiImg from './../../../assets/images/logo-orange.svg'
 import Description from  './../../atoms/description'
 
 const MenuTopo = styled.div`
