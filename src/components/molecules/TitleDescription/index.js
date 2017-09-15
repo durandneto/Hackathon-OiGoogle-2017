@@ -9,70 +9,70 @@ import Container from  './../../atoms/container/column'
 
 const renderTitle = (props) => {
 	switch ( props.size ) {
-	 
+
 	case 1:
 		return <Title.H1 {...props}>
 		{
  		Array.isArray(props.Title2) ?
 	 		props.Title2.map( ( text, index ) => {
-	 			return <Description key={ index } >{ text }</Description> 
+	 			return <Description fontWeight='700' key={ index } >{ text }</Description>
 	 		})
-	 	: <Description >{ props.Title2 }</Description> 
+	 	: <Description fontWeight='700'>{ props.Title2 }</Description>
 		}
 		</Title.H1>
-		break 
+		break
 	case 2:
 		return <Title.H2 {...props}>	{
  		Array.isArray(props.Title2) ?
 	 		props.Title2.map( ( text, index ) => {
-	 			return <Description key={ index } >{ text }</Description> 
+	 			return <Description fontWeight='700' key={ index } >{ text }</Description>
 	 		})
-	 	: <Description >{ props.Title2 }</Description> 
+	 	: <Description fontWeight='700'>{ props.Title2 }</Description>
 		}</Title.H2>
-		break 
+		break
 	case 3:
 		return <Title.H3 {...props}>	{
  		Array.isArray(props.Title2) ?
 	 		props.Title2.map( ( text, index ) => {
-	 			return <Description key={ index } >{ text }</Description> 
+	 			return <Description fontWeight='700' key={ index } >{ text }</Description>
 	 		})
-	 	: <Description >{ props.Title2 }</Description> 
+	 	: <Description fontWeight='700'>{ props.Title2 }</Description>
 		}</Title.H3>
-		break 
+		break
 	case 4:
 		return <Title.H4 {...props}>	{
  		Array.isArray(props.Title2) ?
 	 		props.Title2.map( ( text, index ) => {
-	 			return <Description key={ index } >{ text }</Description> 
+	 			return <Description fontWeight='700' key={ index } >{ text }</Description>
 	 		})
-	 	: <Description >{ props.Title2 }</Description> 
+	 	: <Description fontWeight='700'>{ props.Title2 }</Description>
 		}</Title.H4>
-		break 
+		break
 	case 5:
 		return <Title.H5 {...props}>	{
  		Array.isArray(props.Title2) ?
 	 		props.Title2.map( ( text, index ) => {
-	 			return <Description key={ index } >{ text }</Description> 
+	 			return <Description fontWeight='700' key={ index } >{ text }</Description>
 	 		})
-	 	: <Description >{ props.Title2 }</Description> 
+	 	: <Description fontWeight='700'>{ props.Title2 }</Description>
 		}</Title.H5>
-		break 
+		break
 	case 6:
 		return <Title.H6 {...props}>	{
  		Array.isArray(props.Title2) ?
 	 		props.Title2.map( ( text, index ) => {
-	 			return <Description key={ index } >{ text }</Description> 
+	 			return <Description fontWeight='700' key={ index } >{ text }</Description>
 	 		})
-	 	: <Description >{ props.Title2 }</Description> 
+	 	: <Description fontWeight='700'>{ props.Title2 }</Description>
 		}</Title.H6>
 		break
 	default:
 		return <Title.H2 {...props}>	{
  		Array.isArray(props.Title2) ?
 	 		props.Title2.map( ( text, index ) => {
-	 			return <Description key={ index } >{ text }</Description> 
+	 			return <Description fontWeight='700' key={ index } >{ text }</Description>
 	 		})
-	 	: <Description >{ props.Title2 }</Description> 
+	 	: <Description fontWeight='700'>{ props.Title2 }</Description>
 		}</Title.H2>
 
 	}
