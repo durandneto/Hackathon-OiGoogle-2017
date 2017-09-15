@@ -9,7 +9,9 @@ import Description from  './../../atoms/description'
 import * as Title from  './../../atoms/title'
 
 import oiImg from './../../../assets/images/logo-orange.png'
-import bgHero from './../../../assets/images/bg-hero.png'
+import bgHero from './../../../assets/images/bg-hero.jpg'
+import bgHeroTablet from './../../../assets/images/bg-hero@2x.jpg'
+import bgHeroDesktop from './../../../assets/images/bg-hero@3x.jpg'
 
 const links = [{
 	href: '#'	
@@ -87,7 +89,12 @@ const ContainerPrice = styled.div`
 `;
 
 const Sessao1 = (props) => (
-	<ContainerColumn fill75 background = { bgHero } transparent >
+	<ContainerColumn fill75 backgroundMedia = {{
+		mobile: bgHero
+		, tablet: bgHeroTablet
+		, desktop: bgHeroDesktop
+
+	}} transparent >
 		<ContainerRow container> 
 			<BreadCrumb links = { links }/>
 		</ContainerRow>

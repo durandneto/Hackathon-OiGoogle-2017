@@ -1,6 +1,13 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 
+const getResponsiveImage = ( url , size) => {
+
+	const path = url.split('.')
+	return path[0] + size + '.' + path[1]
+
+}
+
 
 export default styled.div`
 	display: flex;
@@ -51,12 +58,28 @@ export default styled.div`
 	}
 
 
-
-
 	${ props => props.border && `
 		border: solid 0.2em;
 		border-color: ${props => props.theme.border ? props.theme.border.color : '#909090'};`
 	}
+
+	${ props => props.backgroundMedia && `
+
+		background: url(${props.backgroundMedia.desktop}) center top no-repeat transparent;
+		background-size: cover;
+		
+		@media (max-width: 767px) {
+			background: url(${props.backgroundMedia.tablet}) center top no-repeat transparent;
+			background-size: cover;
+		}; 
+
+
+		@media (max-width: 500px) {
+			background: url(${props.backgroundMedia.mobile}) center top no-repeat transparent;
+			background-size: cover;
+		};
+
+	`}
 
 	${ props => props.background && `
 		background: url(${props.background}) center top no-repeat transparent;
