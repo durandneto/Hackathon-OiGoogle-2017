@@ -12,7 +12,7 @@ import * as Title from  './../../atoms/title'
 import Col from  './../../atoms/container/column'
 
 import oiImg from './../../../assets/images/logo-orange.png'
- 
+
 class Footer extends Component {
 	constructor(props){
         super(props);
@@ -23,7 +23,7 @@ class Footer extends Component {
         this._toggleShowLinks = this._toggleShowLinks.bind(this)
 	}
 
-	_toggleShowLinks() { 
+	_toggleShowLinks() {
 		this.setState({
         	openedLinks: !this.state.openedLinks
         })
@@ -38,7 +38,7 @@ class Footer extends Component {
 					<Link>Oi.com.br</Link>
 				</Row>
 				{
-					this.state.openedLinks && 
+					this.state.openedLinks &&
 						<Row spaceAround margin padding>
 							<Col padding margin >
 								<Title.H6>Regulamentos das ofertas</Title.H6>
@@ -56,14 +56,7 @@ class Footer extends Component {
 									})
 								}
 							</Col>
-							<Col padding margin >
-								<Title.H6>Sumários das ofertas</Title.H6>
-								{
-									this.props.sumary.map( ( link, index ) => {
-										return <Link margin key = { index } href = { link.href } >{ link.text }</Link>
-									})
-								}
-							</Col>
+							
 						</Row>
 				}
 			</Col>
