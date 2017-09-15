@@ -108,4 +108,8 @@ injectGlobal`
   *, *:before, *:after {
     box-sizing: inherit;
   }
+
+  #outlet {
+    opacity: 1;
+  }
 `;

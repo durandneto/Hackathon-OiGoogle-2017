@@ -3,6 +3,7 @@ import {render} from 'react-dom'
 import ReactDOMServer from 'react-dom/server'
 import { Router, RouterContext, match, browserHistory, createMemoryHistory } from 'react-router'
 import { Provider } from 'react-redux'
+import HomePage from './components/pages/Home/index.js'
 
 import store from './store'
 
@@ -12,7 +13,12 @@ import Routes from './routes'
 /* Client render (optional) */
 if (typeof document !== 'undefined') {
   const outlet = document.getElementById('outlet')
-  render( (<Provider store={store}><Router history={browserHistory} routes={Routes} /></Provider>), outlet)
+  render( (
+    <Provider store={store}>
+      {/* <Router history={browserHistory} routes={Routes} /> */}
+      <HomePage />
+    </Provider>
+  ), outlet)
 }
 
 /* Exported static site renderer */
@@ -27,7 +33,8 @@ export default (locals, callback) => {
     var html = ReactDOMServer.renderToStaticMarkup(
       <Provider store={store}>
         <Template>
-          <RouterContext {...renderProps} />
+          {/* <RouterContext {...renderProps} /> */}
+          <HomePage />
         </Template>
       </Provider>
     );

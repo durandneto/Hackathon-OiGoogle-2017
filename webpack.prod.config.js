@@ -26,12 +26,12 @@ module.exports = {
               },
             {
                 test: /\.(jpg|png|svg)/,
-                use: 'file-loader?name=/assets/img-[hash:6].[ext]',
+                use: 'file-loader?name=/15mega/assets/img-[hash:6].[ext]',
                 include: __dirname + '/src'
             },
             {
               test: /\.(eot|ttf|woff|woff2)(\?v=\d+\.\d+\.\d+)?$/,
-              loader: 'file-loader?name=/assets/font-[hash:6].[ext]',
+              loader: 'file-loader?name=/15mega//assets/font-[hash:6].[ext]',
               include: __dirname + '/src'
             },
             {
