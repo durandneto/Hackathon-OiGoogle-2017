@@ -8,6 +8,8 @@ import Sessao4 from './../../organisms/Sessao4'
 import Footer from './../../organisms/Footer'
 
 import Carousel from './../../organisms/Carousel'
+import img1 from './../../../assets/images/tvch01.png'
+import img2 from './../../../assets/images/tvch02.png'
 
 import Row from  './../../atoms/container/row'
 import Col from  './../../atoms/container/column'
@@ -25,11 +27,14 @@ const settings = {
 
 const HomePage = (props) => (
 	<Col>
-		<Sessao1 full padding/>
+		<Sessao1 full/>
 		<Sessao2/>
-		<Sessao3  margin alignCenter/>
+		<Sessao3 margin padding alignCenter/>
 		<Sessao4 alignCenter/>
-    <Carousel {...settings} />
+    <Carousel {...settings } images={[
+      {'src': img1},
+      {'src': img2}
+    ]}/>
 		<Footer { ...props.FooterLink } />
 	</Col>
 );

@@ -6,19 +6,20 @@ const AmpH2 = (props) => (
 )
 
 const H1 = styled.h1`
-	font-family: SimplonHeadline;
 	width: 100%;
-	margin:0;
 	padding:0;
 	font-size: 240%;
+	font-family: SimplonHeadline;
+	${ props => props.fontNormal ? `font-weight: normal;` : 'font-weight: 400;' }
+	${ props => props.marginCustom ? `margin: ${props.marginCustom};` : 'margin:0;' }
 	${ props => props.margin && 'margin: 1em 0;'}
 	${ props => props.padding && 'padding: 1em;'}
-	color: ${ props => props.theme.color && props.theme.color.title ? props.theme.color.title : '#000'};
+	color: ${ props => props.color ? props.color : '#909090'};
 	${ props => props.centered && 'align-self: center;' };
 	${ props => props.isUpperCase && 'text-transform: uppercase' };
 	${ props => props.isLowerCase && 'text-transform: lowercase' };
 	& * {
-		color: ${ props => props.theme.color && props.theme.color.title ? props.theme.color.title : '#000'};
+		color: ${ props => props.colorChild ? props.colorChild : '#909090'};
 	}
 `
 const H2 = styled.h2`
@@ -29,12 +30,12 @@ const H2 = styled.h2`
 	font-size: 220%;
 	${ props => props.margin && 'margin: 1em 0;'}
 	${ props => props.padding && 'padding: 1em;'}
-	color: ${ props => props.theme.color && props.theme.color.title ? props.theme.color.title : '#000'};
+	color: ${ props => props.color ? props.color : '#909090'};
 	${ props => props.centered && 'align-self: center;' };
 	${ props => props.isUpperCase && 'text-transform: uppercase' };
 	${ props => props.isLowerCase && 'text-transform: lowercase' };
 	& * {
-		color: ${ props => props.theme.color && props.theme.color.title ? props.theme.color.title : '#000'};
+		color: ${ props => props.colorChild ? props.colorChild : '#909090'};
 	}
 `
 const H3 = styled.h3`
@@ -45,12 +46,12 @@ const H3 = styled.h3`
 	font-size: 180%;
 	${ props => props.margin && 'margin: 1em 0;'}
 	${ props => props.padding && 'padding: 1em;'}
-	color: ${ props => props.theme.color && props.theme.color.title ? props.theme.color.title : '#000'};
+	color: ${ props => props.color ? props.color : '#909090'};
 	${ props => props.centered && 'align-self: center;' };
 	${ props => props.isUpperCase && 'text-transform: uppercase' };
 	${ props => props.isLowerCase && 'text-transform: lowercase' };
 	& * {
-		color: ${ props => props.theme.color && props.theme.color.title ? props.theme.color.title : '#000'};
+		color: ${ props => props.colorChild ? props.colorChild : '#909090'};
 	}
 `
 const H4 = styled.h4`
@@ -61,12 +62,12 @@ const H4 = styled.h4`
 	font-size: 160%;
 	${ props => props.margin && 'margin: 1em 0;'}
 	${ props => props.padding && 'padding: 1em;'}
-	color: ${ props => props.theme.color && props.theme.color.title ? props.theme.color.title : '#000'};
+	color: ${ props => props.color ? props.color : '#909090'};
 	${ props => props.centered && 'align-self: center;' };
 	${ props => props.isUpperCase && 'text-transform: uppercase' };
 	${ props => props.isLowerCase && 'text-transform: lowercase' };
 	& * {
-		color: ${ props => props.theme.color && props.theme.color.title ? props.theme.color.title : '#000'};
+		color: ${ props => props.colorChild ? props.colorChild : '#909090'};
 	}
 `
 const H5 = styled.h5`
@@ -77,12 +78,12 @@ const H5 = styled.h5`
 	font-size: 130%;
 	${ props => props.margin && 'margin: 1em 0;'}
 	${ props => props.padding && 'padding: 1em;'}
-	color: ${ props => props.theme.color && props.theme.color.title ? props.theme.color.title : '#000'};
+	color: ${ props => props.color ? props.color : '#909090'};
 	${ props => props.centered && 'align-self: center;' };
 	${ props => props.isUpperCase && 'text-transform: uppercase' };
 	${ props => props.isLowerCase && 'text-transform: lowercase' };
 	& * {
-		color: ${ props => props.theme.color && props.theme.color.title ? props.theme.color.title : '#000'};
+		color: ${ props => props.colorChild ? props.colorChild : '#909090'};
 	}
 `
 const H6 = styled.h6`
@@ -93,12 +94,12 @@ const H6 = styled.h6`
 	font-size: 100%;
 	${ props => props.margin && 'margin: 1em 0;'}
 	${ props => props.padding && 'padding: 1em;'}
-	color: ${ props => props.theme.color && props.theme.color.title ? props.theme.color.title : '#000'};
+	color: ${ props => props.color ? props.color : '#909090'};
 	${ props => props.centered && 'align-self: center;' };
 	${ props => props.isUpperCase && 'text-transform: uppercase' };
 	${ props => props.isLowerCase && 'text-transform: lowercase' };
 	& * {
-		color: ${ props => props.theme.color && props.theme.color.title ? props.theme.color.title : '#000'};
+		color: ${ props => props.colorChild ? props.colorChild : '#909090'};
 	}
 `
 export default H2

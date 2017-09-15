@@ -9,7 +9,7 @@ import Img from  './../../atoms/img'
 
 import oiImg3 from './../../../assets/images/icon-fixo-section.png'
 
-const Carousel1 = (props) => (
+const Carousel = (props) => (
 	<Row alignCenter>
 		<Col size2 margin padding>
 			    <IconTitleDescription
@@ -41,4 +41,4 @@ const Carousel1 = (props) => (
 	</Row>
 );
 
-export default Carousel1
+export default Carousel

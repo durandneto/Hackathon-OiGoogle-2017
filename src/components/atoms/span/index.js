@@ -53,15 +53,14 @@ const fontWeight = (Weight) => {
 	}
 }
 
-export default styled.p`
+export default styled.span`
 	font-family: Simplon;
 	margin:0;
 	padding:0;
-	color: ${ props => props.color ? props.color : '#909090'};
+	color: ${ props => props.color? props.color : '#909090'};
 	${ props => props.isUpperCase && 'text-transform: uppercase' };
 	${ props => props.isLowerCase && 'text-transform: lowercase' };
 	font-size: ${ props => props.size ? `${calcSize(props.size)}` : '100%' };
-	font-weight: ${ props => props.fontWeight ? props.fontWeight : '300' };
 	${ props => props.margin && 'margin: 0.5em' };
 `
 
