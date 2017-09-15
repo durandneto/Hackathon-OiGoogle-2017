@@ -89,7 +89,6 @@ const ContainerPrice = styled.div`
 `;
 
 const Sessao1 = (props) => (
-<<<<<<< Updated upstream
 	<ContainerColumn fill75 backgroundMedia = {{
 		mobile: bgHero
 		, tablet: bgHeroTablet
@@ -97,10 +96,6 @@ const Sessao1 = (props) => (
 
 	}} transparent >
 		<ContainerRow container>
-=======
-	<ContainerColumn fill75 background = { bgHero } transparent >
-		<ContainerRow container>
->>>>>>> Stashed changes
 			<BreadCrumb links = { links }/>
 		</ContainerRow>
 		<ContainerRow container>

@@ -10,9 +10,18 @@ import Line from  './../../atoms/line'
 import oiImg from './../../../assets/images/bg-fixo.png'
 
 let width = 500
- if ( window  || document ){
-    width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
- }
+
+if (typeof window !== 'undefined') {
+	width = window.innerWidth;
+  // we are in browser
+  // your original but failing client code goes here (not the one above, but the one that actually fails)
+} else if (typeof document !== 'undefined') {
+	width = document.documentElement.clientWidth || document.body.clientWidth;
+} else {
+  // we are in static site generator / server
+  // do not check for locale on the window object,
+  // just require default locale
+}
 
 
 let contentSession;
