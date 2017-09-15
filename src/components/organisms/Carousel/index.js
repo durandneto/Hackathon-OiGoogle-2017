@@ -1,21 +1,19 @@
 import React from 'react'
-import Slider from 'react-slick'
 
 import Col from  './../../atoms/container/column'
 import Row from  './../../atoms/container/row'
 import IconTitleDescription from  './../../molecules/IconTitleDescription'
 import Img from  './../../atoms/img'
-
-
-import oiImg3 from './../../../assets/images/icon-fixo-section.png'
+import Icon from './../../atoms/icons'
+import Slider from './../../molecules/carousel'
 
 const Carousel = (props) => (
-	<Row alignCenter>
-		<Col size2 margin padding>
+	<Row container alignCenter>
+		<Col margin padding>
 			    <IconTitleDescription
 				size={2}
 				img = {{
-					 src: oiImg3
+					 type: 'product-tv'
 				}}
 				alignLeft
 				Title2={[
@@ -26,17 +24,11 @@ const Carousel = (props) => (
 						]}
 				Description2={['Conteúdos pra todos os','gostos e idades.']} />
 		</Col>
-		<Col size2>
+		<Col>
 			<Row>
-				<Slider {...props}>
-					{
-						props.images.map( (item, index ) => {
-							return <div key = { index } >{ <Img src = { item.src } /> }</div>
-						})
-					}
-				</Slider>
+				<Slider {...props}/>
 			</Row>
-    </Col>
+    	</Col>
 
 	</Row>
 );
