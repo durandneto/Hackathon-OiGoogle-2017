@@ -31,15 +31,15 @@ class Footer extends Component {
 
 	render () {
 		return (
-			<Col margin>
-				<Row spaced alignCenter>
+			<Col margin container>
+				<Row spaced alignCenter container>
 					<Img src = { oiImg } />
 					<Link  onClick = { this._toggleShowLinks }>Veja o regulamento</Link>
 					<Link>Oi.com.br</Link>
 				</Row>
 				{
 					this.state.openedLinks &&
-						<Row spaceAround margin padding>
+						<Row spaceAround margin padding container>
 							<Col padding margin >
 								<Title.H6>Regulamentos das ofertas</Title.H6>
 								{

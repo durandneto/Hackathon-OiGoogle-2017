@@ -99,7 +99,7 @@ const CardLine3 = [
 
 
 const Sessao5 = (props) => (
-	<ContainerColumn {...props} >
+	<ContainerColumn {...props} container >
 		<ContainerRow container>
 			<ContainerColumn sizeFull margin>
 				<IconTitleDescription

@@ -38,12 +38,51 @@ const Headline = styled.div`
 	@media (min-width: 992px) {
 		margin-top: 25px;
 		font-size: 30px;
-		width: 55%;
+		width: 56%;
 	};
 	@media (min-width: 1920px) {
 		margin-top: 30px;
 		font-size: 33px;
 		width: 620px;
+	};
+`;
+
+const ContainerPrice = styled.div`
+
+	margin-top: 16px;
+
+	border-top: 1px solid #3b3634;
+    border-color: rgba(255, 255, 255, .15);
+
+	.preffixText {
+		font-size: 12px;
+	}
+	.monetaryText {
+		font-size: 57px
+	}
+	.valueText {
+		font-size: 138px;
+	}
+	.centsText {
+		font-size: 57px;
+	}
+	.suffixText {
+		font-size: 32px;
+	}
+
+	@media (max-width: 767px) {
+		.monetaryText {
+			font-size: 40px
+		}
+		.valueText {
+			font-size: 98px;
+		}
+		.centsText {
+			font-size: 38px;
+		}
+		.suffixText {
+			font-size: 23px;
+		}
 	};
 `;
 
@@ -58,19 +97,27 @@ const Sessao1 = (props) => (
 			</Headline>
 		</ContainerRow>
 		<ContainerRow container>  
-			<ContainerColumn alignEnd>
+			<ContainerPrice>
 				<Price
 					preffix = { 'por apenas:' }
 					monetary = { 'R$' }
-				  	value={'199'}
-				  	cents={'90'}
-				  	suffix={'Mês'}
-				  	separator={','}
+				  	value = { '49' }
+				  	cents = { '90' }
+				  	suffix = { 'Mês' }
+				  	separator = { ',' }
+					colorText = { 'rgba(255, 255, 255, .5)' }
+					colorValue = { '#f0c000' }
+					weightValue = { 'Medium' }
+					classpreffix = { 'preffixText' }
+					classmonetary = { 'monetaryText' }
+					classvalue = { 'valueText' }
+					classcents = { 'centsText' }
+					classsuffix = { 'suffixText' }
 				 />
-			</ContainerColumn>
-			<ContainerColumn container>
+			</ContainerPrice>
+			{/* <ContainerColumn>
 				<Description size = { -1 } >Valor no Oi Total Intermediário: R$ 199,90/mês</Description>
-			</ContainerColumn>
+			</ContainerColumn> */}
 		</ContainerRow>
 	</ContainerColumn>
 );

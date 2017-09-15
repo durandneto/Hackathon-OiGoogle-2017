@@ -57,7 +57,7 @@ export default styled.p`
 	font-family: Simplon;
 	margin:0;
 	padding:0;
-	color: ${ props => props.color ? props.color : '#909090'};
+	color: ${ props => props.theme.color ? props.theme.color.description : '#909090'};
 	${ props => props.isUpperCase && 'text-transform: uppercase' };
 	${ props => props.isLowerCase && 'text-transform: lowercase' };
 	font-size: ${ props => props.size ? `${calcSize(props.size)}` : '100%' };

@@ -38,10 +38,10 @@ const Row = (props) => (
 			<ContainerRow>
 				<Input placeholder={props.TextTitle}  onChange={ props.handleChange } name='title' />
 				<Input placeholder={props.TextDescription}  onChange={ props.handleChange } name='description' />
-				<Input placeholder={props.TextDescription}  onChange={ props.handleChange } name='description' />
+				<Input placeholder={'A gente liga'}  onChange={ props.handleChange } name='agenteliga' />
 			</ContainerRow>
 			<ContainerRow>
-				<Button primary full onClick= { props.onSave   }>Save</Button>
+				<Button primary onClick= { props.onSave   }>Receber ligação grátis</Button>
 			</ContainerRow>
 		</ContainerRow>
 );
