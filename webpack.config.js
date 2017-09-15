@@ -44,15 +44,6 @@ module.exports = {
     },
     watch: true,
     plugins: [
-        new webpack.DefinePlugin({
-            PRODUCTION: JSON.stringify(true),
-            BROWSER_SUPPORTS_HTML5: true,
-            TWO: "1+1",
-            "typeof window": JSON.stringify("object")
-          }),
-        new webpack.optimize.DedupePlugin(), //dedupe similar code 
-        new webpack.optimize.UglifyJsPlugin(), //minify everything
-        new webpack.optimize.AggressiveMergingPlugin(), //Merge chunks
         new StaticSiteGeneratorPlugin({entry: 'main', crawl: true}),
         new BrowserSyncPlugin({
             host: 'localhost',
