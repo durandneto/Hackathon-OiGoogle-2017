@@ -9,12 +9,27 @@ import Line from  './../../atoms/line'
 
 import oiImg from './../../../assets/images/bg-sessao-2.png'
 
- 
+let width = 500
+ if ( window  || document ){
+    width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+ }
+
+
+let contentSession;
+if(width <= 500){
+  contentSession = <TitleImage size={4} margin text = { ['Tudo pra você ficar','conectado, se divertir','e se informar'] }/>
+} else {
+  contentSession = <TitleImage size={4} margin img = { oiImg } text = { ['Tudo pra você ficar','conectado, se divertir','e se informar'] }/>
+}
+
 const Sessao2 = (props) => (
 	<ContainerColumn {...props} >
 		<ContainerRow container>
 			<ContainerColumn size2 margin >
-				<TitleImage size={4} margin img = { oiImg } text = { ['Tudo pra você ficar','conectado, se divertir','e se informar'] }/> 
+
+			{
+        contentSession
+      }
 			</ContainerColumn>
 			<ContainerColumn size2 margin padding>
 				<TitleDescription  margin size={3} line Title2={'Combos da Oi perfeitos pra você'} Description2={'Acesse e assista a tudo o que você e sua família mais gostam. Veja filmes, jogue, ouça músicas, converse com amigos e muito mais.'} />

@@ -9,14 +9,25 @@ import Line from  './../../atoms/line'
 
 import oiImg from './../../../assets/images/bg-fixo.png'
 
+let width = 500
+ if ( window  || document ){
+    width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+ }
 
+
+let contentSession;
+if(width <= 500){
+  contentSession = (<div></div>)
+} else {
+  contentSession = (<ContainerColumn alignCenter size2><Img src={oiImg}/></ContainerColumn>)
+}
 
 const Sessao4 = (props) => (
 	<ContainerColumn {...props} >
 		<ContainerRow container>
-			<ContainerColumn alignCenter size2>
-				<Img src={oiImg}/>
-			 </ContainerColumn>
+			 {
+				 contentSession
+			 }
 			 <ContainerColumn size2 padding>
 			    <IconTitleDescription
 				size={2}
